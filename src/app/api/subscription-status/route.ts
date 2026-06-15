@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getStripe } from "@/lib/stripe";
+import Stripe from "stripe";
 
 /**
  * Checks whether a stored one-time purchase (checkout session) is still valid.
@@ -18,7 +18,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const stripe = getStripe();
+    const secretKey = process.env.STRIPE_SECRET_KEY;
+
+    if (!secretKey) {
+      return NextResponse.json(
+        {
+          error:
+            "STRIPE_SECRET_KEY is not configured. Add your secret key to .env.local.",
+        },
+        { status: 500 }
+      );
+    }
+
+    const stripe = new Stripe(secretKey);
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
     const active =

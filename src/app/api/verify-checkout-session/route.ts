@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getStripe } from "@/lib/stripe";
+import Stripe from "stripe";
 
 /**
  * Verifies a completed Stripe Checkout Session after redirect to /success.
@@ -17,7 +17,19 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const stripe = getStripe();
+    const secretKey = process.env.STRIPE_SECRET_KEY;
+
+    if (!secretKey) {
+      return NextResponse.json(
+        {
+          error:
+            "STRIPE_SECRET_KEY is not configured. Add your secret key to .env.local.",
+        },
+        { status: 500 }
+      );
+    }
+
+    const stripe = new Stripe(secretKey);
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
     if (session.status !== "complete" || session.payment_status !== "paid") {

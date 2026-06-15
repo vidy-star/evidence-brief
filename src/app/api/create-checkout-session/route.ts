@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getStripe } from "@/lib/stripe";
+import Stripe from "stripe";
 
 /**
  * Creates a Stripe Checkout Session for the $29.95 CAD one-time purchase.
@@ -39,8 +39,26 @@ export async function POST() {
       );
     }
 
-    // STRIPE_SECRET_KEY is validated inside getStripe()
-    const stripe = getStripe();
+    const secretKey = process.env.STRIPE_SECRET_KEY;
+
+    if (!secretKey) {
+      return NextResponse.json(
+        {
+          error:
+            "STRIPE_SECRET_KEY is not configured. Add your secret key to .env.local.",
+        },
+        { status: 500 }
+      );
+    }
+
+    console.log("PRICE ID:", process.env.STRIPE_PRICE_ID);
+    console.log(
+      "SECRET KEY PREFIX:",
+      process.env.STRIPE_SECRET_KEY?.substring(0, 25)
+    );
+    console.log("Starts with price_?", priceId?.startsWith("price_"));
+
+    const stripe = new Stripe(secretKey);
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
