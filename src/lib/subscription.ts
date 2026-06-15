@@ -11,7 +11,7 @@ export function loadStoredSubscription(): StoredSubscription | null {
     if (!raw) return null;
 
     const parsed = JSON.parse(raw) as StoredSubscription;
-    if (!parsed.subscriptionId || !parsed.customerId) return null;
+    if (!parsed.subscriptionId) return null;
 
     return parsed;
   } catch {
