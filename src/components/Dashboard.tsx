@@ -84,7 +84,7 @@ export function Dashboard() {
         <section className="mb-8">
           <div className="flex items-start gap-3 rounded-xl border border-accent/20 bg-gradient-to-r from-legal-900 to-legal-800 px-6 py-8 text-white shadow-elevated">
             <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
-            <div>
+            <div className="min-w-[280px]">
             </div>
             <h2 className="font-serif text-2xl font-bold">
             TEST HEADER JUNE 17 2026
