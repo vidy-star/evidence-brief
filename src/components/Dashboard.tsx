@@ -113,39 +113,6 @@ export function Dashboard() {
   </span>
 </div>
 
-<div className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 p-3 text-xs">
-  <p>
-    <strong>EvidenceBrief is developed by Edge Paralegal Services.</strong>
-  </p>
-
-  <p>✓ Designed for Ontario Tribunals</p>
-<p>✓ Landlord and Tenant Board</p>
-<p>✓ Small Claims Court</p>
-<p>✓ Human Rights Tribunal</p>
-
-<p className="mt-3">
-  support@evidencebrief.ca
-</p>
-
-<p>
-  905-519-0241
-</p>
-
-  <p className="mt-2">
-    EvidenceBrief provides document analysis and information only.
-  </p>
-
-  <p>
-    It is not a law firm and does not provide legal advice.
-  </p>
-
-  <p>
-    Use of this service does not create a paralegal-client relationship.
-  </p>
-</div>
-</div>
-</section>
-
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-6">
             <section>
@@ -199,7 +166,15 @@ export function Dashboard() {
                 <p className="text-xs text-legal-500">
                   One-time payment. No subscription. No recurring charges.
                 </p>
+                )}
+              {isSubscriptionHydrated && !isSubscribed && (
+                <div className="mt-2 text-xs text-legal-600">
+                  <p><strong>Questions before purchasing?</strong></p>
+                  <p>support@evidencebrief.ca</p>
+                  <p>905-519-0241</p>
+                </div>
               )}
+              
               <div className="flex items-start gap-2 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3">
                 <AlertTriangle
                   className="mt-0.5 h-4 w-4 shrink-0 text-amber-600"
