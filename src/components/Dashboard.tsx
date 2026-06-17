@@ -87,7 +87,7 @@ export function Dashboard() {
             <div className="min-w-[280px]">
             </div>
             <h2 className="font-serif text-2xl font-bold">
-            TEST HEADER JUNE 17 2026
+            Organize Your Evidence. Strengthen Your Case.
 </h2>
 
 <p className="mt-2 text-sm text-legal-200">
