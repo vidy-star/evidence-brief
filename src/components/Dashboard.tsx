@@ -82,36 +82,54 @@ export function Dashboard() {
     <PageShell>
       <main className="mx-auto max-w-7xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
         <section className="mb-8">
-          <div className="flex items-start gap-3 rounded-xl border border-accent/20 bg-gradient-to-r from-legal-900 to-legal-800 px-6 py-5 text-white shadow-elevated">
+          <div className="flex items-start gap-3 rounded-xl border border-accent/20 bg-gradient-to-r from-legal-900 to-legal-800 px-6 py-8 text-white shadow-elevated">
             <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
             <div>
             </div>
-            <h2 className="font-serif text-lg font-semibold">
-  EvidenceBrief – AI-Powered Evidence Organization for Self-Represented Litigants
+            <h2 className="font-serif text-2xl font-bold">
+            TEST HEADER JUNE 17 2026
 </h2>
 
-<p className="mt-1 text-sm text-legal-200">
-  Upload court documents, notices, evidence, letters, emails, text messages,
-  and legal correspondence. EvidenceBrief organizes your evidence,
+<p className="mt-2 text-sm text-legal-200">
+  Upload notices, emails, text messages, photographs,
+  leases, applications and supporting evidence.
 
-  identifies key events, and helps you prepare hearing-ready materials
-for tribunals and courts.
+  EvidenceBrief automatically organizes exhibits,
+  builds chronologies, and generates hearing-ready
+  packages for Ontario tribunals and courts.
 </p>
  
-<p className="mt-3 text-xs text-legal-300">
-  Designed for self-represented litigants appearing before the
-  Landlord and Tenant Board, Small Claims Court, Human Rights Tribunal,
-  and other administrative tribunals.
-</p>
+<div className="mt-4 flex flex-wrap gap-2 text-xs">
+  <span className="rounded-full bg-white/10 px-3 py-1">
+    ✓ Organize Evidence
+  </span>
+
+  <span className="rounded-full bg-white/10 px-3 py-1">
+    ✓ Build Timelines
+  </span>
+
+  <span className="rounded-full bg-white/10 px-3 py-1">
+    ✓ Generate Hearing Packages
+  </span>
+</div>
 
 <div className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 p-3 text-xs">
   <p>
     <strong>EvidenceBrief is developed by Edge Paralegal Services.</strong>
   </p>
 
-  <p>Support: support@edgeparalegal.com</p>
-  <p>General Inquiries: info@edgeparalegal.com</p>
-  <p>Phone: 905-519-0241</p>
+  <p>✓ Designed for Ontario Tribunals</p>
+<p>✓ Landlord and Tenant Board</p>
+<p>✓ Small Claims Court</p>
+<p>✓ Human Rights Tribunal</p>
+
+<p className="mt-3">
+  support@evidencebrief.ca
+</p>
+
+<p>
+  905-519-0241
+</p>
 
   <p className="mt-2">
     EvidenceBrief provides document analysis and information only.
