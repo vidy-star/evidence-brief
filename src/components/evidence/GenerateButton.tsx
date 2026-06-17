@@ -32,12 +32,12 @@ export function GenerateButton({
       {isGenerating ? (
         <>
           <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
-          Generating Package…
+          Analyzing Documents...
         </>
       ) : (
         <>
           <FileOutput className="h-4 w-4" aria-hidden="true" />
-          Generate Hearing Package
+          Analyze My Documents
         </>
       )}
       {!isGenerating && fileCount > 0 && (

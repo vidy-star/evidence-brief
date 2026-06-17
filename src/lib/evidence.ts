@@ -287,37 +287,36 @@ export function generateHearingPackage(files: EvidenceFile[]): HearingPackage {
   const sections: OutputSection[] = [
     {
       id: "chronology",
-      title: "Chronology",
+      title: "Timeline of Events",
       description:
-        "Timeline of evidence sorted by priority, event date, and exhibit",
+        "Chronological summary of important events and documents",
       content: buildChronology(sorted),
     },
     {
       id: "evidence-index",
-      title: "Evidence Index",
-      description: "Exhibit list with document type, priority, and page range",
+      title: "Uploaded Documents",
+      description: "Inventory of uploaded documents and supporting evidence",
       content: buildEvidenceIndex(sorted),
     },
     {
-      id: "hearing-summary",
-      title: "Hearing Summary",
-      description: "Overview of the evidence package for hearing preparation",
-      content: buildHearingSummary(sorted),
-    },
+        id: "hearing-summary",
+        title: "Case Summary",
+        description: "Overview of the uploaded documents and key facts identified",
+        content: buildHearingSummary(sorted),
+      },
     {
       id: "draft-t2",
-      title: "Draft T2 Allegations",
-      description: "Template T2 application allegations (maintenance & enjoyment)",
+      title: "Key Issues Identified",
+      description: "Potential issues, concerns, and arguments identified in the documents",
       content: buildDraftT2(sorted),
     },
     {
       id: "draft-t6",
-      title: "Draft T6 Allegations",
-      description: "Template T6 application allegations (non-compliance)",
+      title: "Supporting Legal Concerns",
+      description: "Additional issues and supporting information identified during analysis",
       content: buildDraftT6(sorted),
     },
   ];
-
   return {
     generatedAt: new Date(),
     sections,

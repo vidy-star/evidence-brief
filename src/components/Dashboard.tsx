@@ -85,17 +85,48 @@ export function Dashboard() {
           <div className="flex items-start gap-3 rounded-xl border border-accent/20 bg-gradient-to-r from-legal-900 to-legal-800 px-6 py-5 text-white shadow-elevated">
             <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
             <div>
-              <h2 className="font-serif text-lg font-semibold">
-                Prepare your hearing evidence
-              </h2>
-              <p className="mt-1 text-sm text-legal-200">
-                Upload your documents, review the evidence table, and generate
-                a complete hearing package with chronology, index, summary, and
-                draft T2/T6 allegations.
-              </p>
             </div>
-          </div>
-        </section>
+            <h2 className="font-serif text-lg font-semibold">
+  EvidenceBrief – AI-Powered Evidence Organization for Self-Represented Litigants
+</h2>
+
+<p className="mt-1 text-sm text-legal-200">
+  Upload court documents, notices, evidence, letters, emails, text messages,
+  and legal correspondence. EvidenceBrief organizes your evidence,
+
+  identifies key events, and helps you prepare hearing-ready materials
+for tribunals and courts.
+</p>
+ 
+<p className="mt-3 text-xs text-legal-300">
+  Designed for self-represented litigants appearing before the
+  Landlord and Tenant Board, Small Claims Court, Human Rights Tribunal,
+  and other administrative tribunals.
+</p>
+
+<div className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 p-3 text-xs">
+  <p>
+    <strong>EvidenceBrief is developed by Edge Paralegal Services.</strong>
+  </p>
+
+  <p>Support: support@edgeparalegal.com</p>
+  <p>General Inquiries: info@edgeparalegal.com</p>
+  <p>Phone: 905-519-0241</p>
+
+  <p className="mt-2">
+    EvidenceBrief provides document analysis and information only.
+  </p>
+
+  <p>
+    It is not a law firm and does not provide legal advice.
+  </p>
+
+  <p>
+    Use of this service does not create a paralegal-client relationship.
+  </p>
+</div>
+</div>
+</section>
 
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-6">
@@ -168,6 +199,26 @@ export function Dashboard() {
           <section>
             <OutputSections hearingPackage={hearingPackage} />
           </section>
+          <section className="mt-12 border-t pt-6 text-center text-sm text-legal-300">
+  <p>
+    Questions or support? Contact us at{" "}
+    <a
+      href="mailto:support@evidencebrief.ca"
+      className="underline"
+    >
+      support@evidencebrief.ca
+    </a>
+  </p>
+
+  <p className="mt-2">
+    Built by Edge Paralegal Services
+  </p>
+
+  <p className="mt-2 text-xs">
+    EvidenceBrief helps self-represented litigants organize evidence,
+    prepare chronologies, and generate hearing-ready materials.
+  </p>
+</section>
         </div>
       </main>
 

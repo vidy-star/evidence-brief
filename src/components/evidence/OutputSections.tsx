@@ -125,7 +125,7 @@ export function OutputSections({ hearingPackage }: OutputSectionsProps) {
                       )}
                     </button>
                   </div>
-                  <pre className="max-h-80 overflow-auto whitespace-pre-wrap p-4 font-mono text-xs leading-relaxed text-legal-700">
+                  <pre className="max-h-[300px] overflow-auto whitespace-pre-wrap p-4 font-mono text-xs leading-relaxed text-legal-700">
                     {section.content}
                   </pre>
                 </div>
