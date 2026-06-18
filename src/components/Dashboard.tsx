@@ -112,7 +112,7 @@ export function Dashboard() {
     ✓ Generate Hearing Packages
   </span>
 </div>
-
+</section>
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-6">
             <section>
@@ -174,7 +174,7 @@ export function Dashboard() {
                   <p>905-519-0241</p>
                 </div>
               )}
-              
+
               <div className="flex items-start gap-2 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3">
                 <AlertTriangle
                   className="mt-0.5 h-4 w-4 shrink-0 text-amber-600"
