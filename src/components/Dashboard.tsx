@@ -12,7 +12,7 @@ import { useUploadConsent } from "@/hooks/useUploadConsent";
 import { useSubscription } from "@/hooks/useSubscription";
 import { assignExhibitNumbers, fileToEvidence, generateHearingPackage } from "@/lib/evidence";
 import type { EvidenceFile, HearingPackage } from "@/types/evidence";
-
+import { FolderOpen, AlertTriangle } from "lucide-react";
 
 export function Dashboard() {
   const [files, setFiles] = useState<EvidenceFile[]>([]);
