@@ -82,40 +82,48 @@ export function Dashboard() {
     <PageShell>
       <main className="mx-auto max-w-7xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
         <section className="mb-8">
-          <div className="flex items-start gap-3 rounded-xl border border-accent/20 bg-gradient-to-r from-legal-900 to-legal-800 px-6 py-8 text-white shadow-elevated">
-            <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
-            <div className="min-w-[280px]">
-            </div>
-            <h2 className="font-serif text-2xl font-bold">
-            Organize Your Evidence. Strengthen Your Case.
-</h2>
+        <div className="rounded-xl border border-accent/20 bg-gradient-to-r from-legal-900 to-legal-800 px-8 py-10 text-white shadow-elevated">
 
-<p className="mt-2 text-sm text-legal-200">
-  Upload notices, emails, text messages, photographs,
-  leases, applications and supporting evidence.
+<div className="grid gap-8 lg:grid-cols-3 items-start">
 
-  EvidenceBrief automatically organizes exhibits,
-  builds chronologies, and generates hearing-ready
-  packages for Ontario tribunals and courts.
-</p>
- 
-<div className="mt-4 flex flex-wrap gap-2 text-xs">
-  <span className="rounded-full bg-white/10 px-3 py-1">
-    ✓ Organize Evidence
-  </span>
+  <div>
+    <h2 className="font-serif text-4xl font-bold leading-tight">
+      Organize Your Evidence.
+      <br />
+      Prepare For Your Hearing.
+    </h2>
+  </div>
 
-  <span className="rounded-full bg-white/10 px-3 py-1">
-    ✓ Build Timelines
-  </span>
+  <div>
+    <p className="text-base text-legal-200 leading-relaxed">
+      Upload notices, emails, text messages, photographs,
+      leases, applications and supporting evidence.
+    </p>
 
-  <span className="rounded-full bg-white/10 px-3 py-1">
-    ✓ Generate Hearing Packages
-  </span>
+    <p className="mt-4 text-base text-legal-200 leading-relaxed">
+      EvidenceBrief automatically organizes exhibits,
+      builds chronologies, and generates hearing-ready
+      packages for Ontario tribunals and courts.
+    </p>
+  </div>
+
+  <div className="flex flex-col gap-3">
+    <span className="rounded-full bg-white/10 px-4 py-2 text-sm">
+      ✓ Organize Evidence
+    </span>
+
+    <span className="rounded-full bg-white/10 px-4 py-2 text-sm">
+      ✓ Build Timelines
+    </span>
+
+    <span className="rounded-full bg-white/10 px-4 py-2 text-sm">
+      ✓ Generate Hearing Packages
+    </span>
+  </div>
+
 </div>
+
 </div>
-</section>
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div className="space-y-6">
             <section>
               <div className="mb-4 flex items-center gap-2">
                 <FolderOpen className="h-5 w-5 text-legal-600" aria-hidden="true" />
