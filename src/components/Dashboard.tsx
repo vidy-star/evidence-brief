@@ -112,6 +112,7 @@ export function Dashboard() {
     ✓ Generate Hearing Packages
   </span>
 </div>
+</div>
 </section>
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-6">
